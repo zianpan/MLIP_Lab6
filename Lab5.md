@@ -9,12 +9,23 @@ To receive credit for this lab, show your work to the TA during recitation.
 - [ ] Adding the "avg length ratio" Zeno metric to your project
 - [ ] Create 2/3 slices and derive meaningful insights and showcase them to the TA 
 
-## Creating Zeno account
-If you don't have a Zeno account already, create one on Zeno Hub (https://hub.zenoml.com/signup). After logging in to Zeno Hub, generate your API key by clicking on your profile at the top right to navigate to your account page.
+## Java Installation
+- Go to [Jenkins Installation Page](https://www.jenkins.io/doc/book/installing/), select the Operating System you currently use. For your team server, please select [linux](https://www.jenkins.io/doc/book/installing/linux/).
+- Under section [Installation of Java](https://www.jenkins.io/doc/book/installing/linux/#installation-of-java), install java using command: `sudo apt install fontconfig openjdk-17-jre`.
+- Show the success of installation by running `java --version`
 
-## Getting started
-- Clone the starter code from this [Git repository](https://github.com/sayalikandarkar/cmu-mlip-zeno-lab).
-- The repository includes a python notebook which contains the started code.
+## Jenkins Installation
+- In the same page we use in **Java Installation**, locate the installation command for Jenkins. For linux ubuntu system, it's:
+  ```sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+  sudo apt-get update
+  sudo apt-get install jenkins
+  ```
+- Use command `sudo systemctl start jenkins` to start Jenkins server.
+- Show the success of Jenkins installation by running `sudo systemctl status jenkins`
 
 ## Installation instructions
 - python 3.10 version is needed for the zeno packages to run correctly
