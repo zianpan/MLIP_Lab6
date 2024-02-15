@@ -12,6 +12,8 @@ pipeline {
             steps {
                 echo 'Test Step: We run testing tool like pytest here'
                 // TODO: Run pytest command here
+                echo 'Pytest Not Run!!'
+                exit 1
             }
         }
         stage('Deploy') {
