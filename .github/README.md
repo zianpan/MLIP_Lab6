@@ -1,1 +1,1 @@
-../Lab5.md
+[Lab5 write up](../Lab5.md)
