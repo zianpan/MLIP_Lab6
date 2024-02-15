@@ -6,7 +6,7 @@ To receive credit for this lab, show your work to the TA during recitation.
 
 ## Deliverables
 - [ ] Demonstrate the successful installation of Java and Jenkins on the team virtual machine (recommended) or your location machine.
-- [ ] Adding the "avg length ratio" Zeno metric to your project
+- [ ] Complete the `jenkinsfile` to make the Jenkins pipeline test the repo during each build.
 - [ ] Create 2/3 slices and derive meaningful insights and showcase them to the TA 
 
 ## Java Installation
@@ -16,22 +16,23 @@ To receive credit for this lab, show your work to the TA during recitation.
 
 ## Jenkins Installation
 - In the same page we use in **Java Installation**, locate the installation command for Jenkins. For linux ubuntu system, it's:
-  ```sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
-    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-    /etc/apt/sources.list.d/jenkins.list > /dev/null
-  sudo apt-get update
-  sudo apt-get install jenkins
-  ```
+```
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+```
 - Use command `sudo systemctl start jenkins` to start Jenkins server.
 - Show the success of Jenkins installation by running `sudo systemctl status jenkins`
 
-## Installation instructions
-- python 3.10 version is needed for the zeno packages to run correctly
-- pip install packaging ~ version 23.2
+## Fork & Clone the Git Repository and Set Up Running Environment
+- Please use a virtual environment management tool to create a virtual environment. In your team server, it is recommended to use [miniconda](https://docs.anaconda.com/free/miniconda/index.html). Then install `pytest`, `numpy`, `pandas`, and `sklearn` packages.
+- Fork the [repository for lab 5](https://github.com/JayYu0116/MLIP_Lab5) repository and clone it to your local machine.
 
-## Code related details
+## Complete the Jenkins File
 - Replace the API key in the started code
 - Create the project and verify if you can access your project on the hub
 - Finish all 6 steps mentioned in the python notebook 
