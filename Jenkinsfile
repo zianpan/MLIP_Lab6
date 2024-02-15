@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Prebuild Conda Setup') {
-            steps {
-                conda init
-            }
-        }
         stage('Build') {
             steps {
                 echo 'In C or Java, we can compile our program in this step'
