@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test Step: We run testing tool like pytest here'
-                # TODO: Run pytest command here
+                // TODO: Run pytest command here
             }
         }
         stage('Deploy') {
