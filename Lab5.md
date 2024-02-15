@@ -1,13 +1,13 @@
-# Lab 5 - Continuous Integration with Jenkins
+# Lab 6 - Continuous Integration with Jenkins
 
-In this lab, you will explore how to perform Continuous Integration(CI) using Jenkins.
-Jenkins has a wide range of functionalities that facilitate the software development process. In this lab, we will focus on the Continuous Integration aspect, which means updates to the code base are continuously tested to ensure the program's quality.
+In this lab, you will explore how to perform Continuous Integration(CI) using Jenkins. You are highly recommended to use team virtual machine for this lab. </br>
+Jenkins has a wide range of functionalities that facilitate the software development process. In this lab, we will focus on the Continuous Integration aspect, which means updates to the code base are continuously tested to ensure the program's quality.</br>
 To receive credit for this lab, show your work to the TA during recitation.
 
 ## Deliverables
 - [ ] Show correct configuration of a Jenkins pipeline on **forked [Lab5 Github Repo](https://github.com/JayYu0116/MLIP_Lab5/)**. The build process must automatically fetch Jenkinsfile and run pipeline according to it.
 - [ ] Complete the `jenkinsfile` to make the Jenkins pipeline test the repo during each build.
-- [ ] Complete the `test_data_transformation` function in `test.py` to test data split step.
+- [ ] Complete the `test_data_split` function in `test.py` to test data split step.
 
 
 ## Java Installation
@@ -29,9 +29,10 @@ sudo apt-get install jenkins
 - Use command `sudo systemctl start jenkins` to start Jenkins server.
 - Show the success of Jenkins installation by running `sudo systemctl status jenkins`
 - Enter `127.0.0.1:8080` in your browser and set up jenkins according to [post installation wizard](https://www.jenkins.io/doc/book/installing/linux/#setup-wizard).
+- Give Jenkins sudo permission by running `sudo visudo` and add line `jenkins ALL=(ALL) NOPASSWD: ALL` to this file. 
 
 ## Fork & Clone the Git Repository and Set Up Running Environment
-- Please use a virtual environment management tool to for this project. In your team server, it is recommended to use [miniconda](https://docs.anaconda.com/free/miniconda/index.html). Create a python virtual environment and install `pytest`, `numpy`, `pandas`, and `sklearn` packages. If `git` is not installed in your team server, please run `sudo apt install git`.
+- Please use a virtual environment management tool to for this project. In your team server, it is recommended to use [miniconda](https://docs.anaconda.com/free/miniconda/index.html). Create a python virtual environment and install `pytest`, `numpy`, `pandas`, and `sklearn` packages. If `git` is not installed in your team server, please run `sudo apt install git`. (You can use `venv` or `pipenv` instead of `conda` and adjust Jenkinsfile accordingly)
 - Fork [repository for lab 5](https://github.com/JayYu0116/MLIP_Lab5) repository and clone it to your local machine.
 
 ## Setting Up a Jenkins Pipeline
@@ -52,3 +53,6 @@ sudo apt-get install jenkins
 - modified the **TODO** part in `test_utility.py` to test data split function. **Push the changes to Github**
 - Build Jenkins project again and you should have a successful build.
 
+## Additional Resources
+- [Set up Jenkins Pipeline in SCM](https://www.jenkins.io/doc/book/pipeline/getting-started/#defining-a-pipeline-in-scm)
+- [Use conda in Jenkins](https://devops.stackexchange.com/questions/10421/unable-to-run-conda-activate-from-jenkins-pipeline)

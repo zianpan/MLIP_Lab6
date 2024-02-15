@@ -8,20 +8,23 @@ pipeline {
                 echo 'In C or Java, we can compile our program in this step'
                 echo 'In Python, we can build our package here or skip this step'
                 '''
-                
             }
         }
         stage('Test') {
             steps {
-                sh '''
+                sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
-                sudo /home/zekail/miniconda3/bin/conda init
-                sudo /home/zekail/miniconda3/bin/conda run -n mlip python -m pytest
+
+                # TODO fill out the path to conda here
+                # sudo /PATH/TO/CONDA init
+
+                # TODO Complete the command to run pytest
+                # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
+
+                echo 'pytest not runned'
+                exit 1 #comment this line after implementing Jenkinsfile
                 '''
-                
-                // TODO: Run pytest command here
-                // echo 'Pytest Not Run!!'
-                // exit 1
+
             }
         }
         stage('Deploy') {
