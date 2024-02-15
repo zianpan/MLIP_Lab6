@@ -11,9 +11,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test Step: We run testing tool like pytest here'
+                pytest
                 // TODO: Run pytest command here
-                echo 'Pytest Not Run!!'
-                exit 1
+                // echo 'Pytest Not Run!!'
+                // exit 1
             }
         }
         stage('Deploy') {

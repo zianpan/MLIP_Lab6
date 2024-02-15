@@ -38,4 +38,5 @@ def feature_target_stub(housing_data_stub):
 def test_data_split(feature_target_stub):
     return_tuple = data_split(*feature_target_stub)
     # TODO test if the length of return_tuple is 4
-    raise NotImplemented
+    assert len(return_tuple)==4
+    # raise NotImplemented
