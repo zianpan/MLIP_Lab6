@@ -6,6 +6,7 @@ pipeline {
             steps {
                 CONDA_PATH=$HOME/zekail/miniconda3
                 eval "$($CONDA_PATH/bin/conda shell.bash hook)"
+                conda activate mlip
             }
         }
         stage('Build') {
