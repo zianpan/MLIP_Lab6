@@ -5,9 +5,9 @@ Jenkins has a wide range of functionalities that facilitate the software develop
 To receive credit for this lab, show your work to the TA during recitation.
 
 ## Deliverables
-- [ ] Demonstrate the successful installation of Java and Jenkins on the team virtual machine (recommended) or your location machine.
+- [ ] Show correct configuration of a Jenkins pipeline on [Lab5 Github Repo](https://github.com/JayYu0116/MLIP_Lab5/). The build process must automatically fetch Jenkinsfile and run pipeline according to it.
 - [ ] Complete the `jenkinsfile` to make the Jenkins pipeline test the repo during each build.
-- [ ] Create 2/3 slices and derive meaningful insights and showcase them to the TA 
+- [ ] Complete the `test_data_transformation` function in `test.py` to test data transformation's validity.
 
 ## Java Installation
 - Go to [Jenkins Installation Page](https://www.jenkins.io/doc/book/installing/), select the Operating System you currently use. For your team server, please select [linux](https://www.jenkins.io/doc/book/installing/linux/).
@@ -28,9 +28,9 @@ sudo apt-get install jenkins
 - Use command `sudo systemctl start jenkins` to start Jenkins server.
 - Show the success of Jenkins installation by running `sudo systemctl status jenkins`
 
-## Fork & Clone the Git Repository and Set Up Running Environment
-- Please use a virtual environment management tool to create a virtual environment. In your team server, it is recommended to use [miniconda](https://docs.anaconda.com/free/miniconda/index.html). Then install `pytest`, `numpy`, `pandas`, and `sklearn` packages.
-- Fork the [repository for lab 5](https://github.com/JayYu0116/MLIP_Lab5) repository and clone it to your local machine.
+## Clone the Git Repository and Set Up Running Environment
+- Please use a virtual environment management tool to for this project. In your team server, it is recommended to use [miniconda](https://docs.anaconda.com/free/miniconda/index.html). Then install `pytest`, `numpy`, `pandas`, and `sklearn` packages. If `git` is not installed in your team server, please run `sudo apt install git`.
+- Clone [repository for lab 5](https://github.com/JayYu0116/MLIP_Lab5) repository to your local machine.
 
 ## Complete the Jenkins File
 
