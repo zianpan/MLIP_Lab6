@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Prebuild Conda Setup') {
             steps {
+                #!/bin/bash
                 export PATH="$HOME/zekail/miniconda3/bin:$PATH"
                 eval "\${conda shell.bash hook}"
                 conda activate mlip
