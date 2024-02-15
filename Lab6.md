@@ -5,7 +5,7 @@ Jenkins has a wide range of functionalities that facilitate the software develop
 To receive credit for this lab, show your work to the TA during recitation.
 
 ## Deliverables
-- [ ] Show correct configuration of a Jenkins pipeline on **forked [Lab5 Github Repo](https://github.com/JayYu0116/MLIP_Lab5/)**. The build process must automatically fetch Jenkinsfile and run pipeline according to it.
+- [ ] Show correct configuration of a Jenkins pipeline on **forked [Lab5 Github Repo](https://github.com/JayYu0116/MLIP_Lab6/)**. The build process must automatically fetch Jenkinsfile and run pipeline according to it.
 - [ ] Complete the `jenkinsfile` to make the Jenkins pipeline test the repo during each build.
 - [ ] Complete the `test_data_split` function in `test.py` to test data split step.
 
@@ -33,7 +33,7 @@ sudo apt-get install jenkins
 
 ## Fork & Clone the Git Repository and Set Up Running Environment
 - Please use a virtual environment management tool to for this project. In your team server, it is recommended to use [miniconda](https://docs.anaconda.com/free/miniconda/index.html). Create a python virtual environment and install `pytest`, `numpy`, `pandas`, and `sklearn` packages. If `git` is not installed in your team server, please run `sudo apt install git`. (You can use `venv` or `pipenv` instead of `conda` and adjust Jenkinsfile accordingly)
-- Fork [repository for lab 5](https://github.com/JayYu0116/MLIP_Lab5) repository and clone it to your local machine.
+- Fork [repository for lab 5](https://github.com/JayYu0116/MLIP_Lab6) repository and clone it to your local machine.
 
 ## Setting Up a Jenkins Pipeline
 - Enter Jenkins dashboard: 127.0.0.1:8080 using your web browser.
