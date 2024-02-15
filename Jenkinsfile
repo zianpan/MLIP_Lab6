@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test Step: We run testing tool like pytest here'
-                pytest
+                conda run -n mlip python -m pytest
                 // TODO: Run pytest command here
                 // echo 'Pytest Not Run!!'
                 // exit 1
