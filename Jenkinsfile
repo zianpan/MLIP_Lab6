@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Prebuild Conda Setup') {
+            steps {
+                bash
+                conda activate mlip
+            }
+        }
         stage('Build') {
             steps {
                 echo 'In C or Java, we can compile our program in this step'
