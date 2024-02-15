@@ -5,7 +5,7 @@ Jenkins has a wide range of functionalities that facilitate the software develop
 To receive credit for this lab, show your work to the TA during recitation.
 
 ## Deliverables
-- [ ] Show correct configuration of a Jenkins pipeline on forked [Lab5 Github Repo](https://github.com/JayYu0116/MLIP_Lab5/). The build process must automatically fetch Jenkinsfile and run pipeline according to it.
+- [ ] Show correct configuration of a Jenkins pipeline on **forked [Lab5 Github Repo](https://github.com/JayYu0116/MLIP_Lab5/)**. The build process must automatically fetch Jenkinsfile and run pipeline according to it.
 - [ ] Complete the `jenkinsfile` to make the Jenkins pipeline test the repo during each build.
 - [ ] Complete the `test_data_transformation` function in `test.py` to test data split step.
 
