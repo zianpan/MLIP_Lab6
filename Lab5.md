@@ -38,7 +38,7 @@ sudo apt-get install jenkins
 - Enter Jenkins dashboard: 127.0.0.1:8080 using your web browser.
 - Clikc on `+ new item` button on the left.
 - Use `mliplab5` as your project name and choose `pipeline` project.
-- Under `General` section, clikc on `Github Project` and provide your **forked repository** clone url.
+- Under `General` section, click on `Github Project` and provide your **forked repository** clone url.
 - Under `pipeline`, click on `pipeline definition` and choose `Pipeline Script from SCM`. You need to [create personal access token](https://docs.github.com/en/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token). Then choose git as your `SCM`. Add a `username password credential` with **any username** and your **personal access token as the password**.
 - Change the `branch specifier` to `main`. Then, during each build, your Jenkins will pull code from Github and build upon it.
 
