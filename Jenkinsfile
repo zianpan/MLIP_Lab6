@@ -15,6 +15,7 @@ pipeline {
             steps {
                 sh '''
                 echo 'Test Step: We run testing tool like pytest here'
+                export PATH=$PATH:/home/zekail/miniconda3/bin
                 sudo conda init
                 sudo conda run -n mlip python -m pytest
                 '''
