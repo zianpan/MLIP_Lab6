@@ -5,7 +5,7 @@ from prediction_demo import data_preparation,data_split,train_model,eval_model
 
 @pytest.fixture
 def housing_data_stub():
-    return pd.Dataframe(
+    return pd.DataFrame(
       data ={
       'price':[13300000,12250000],
       'area':[7420,8960],
@@ -28,7 +28,7 @@ def test_data_preparation(housing_data_stub):
     assert feature_df.shape[0]==len(target_series)
 
     #Feature only has numerical values
-    assert feature_df.shape[1] == feature_df.select_dtypes(include=np.number).shape[1]
+    assert feature_df.shape[1] == feature_df.select_dtypes(include=(np.number,np.bool_)).shape[1]
 
 @pytest.fixture
 def feature_target_stub(housing_data_stub):
