@@ -8,9 +8,10 @@ def data_preparation(df: pd.DataFrame):
     target = "price"
     features = ["furnishingstatus"]
 
-    feature_df = pd.pandas. \
-        get_dummies(df,columns=["furnishingstatus"]). \
-        loc[:,features]
+    feature_df = pd.get_dummies(
+        df.loc[:,features],
+        columns=["furnishingstatus"])
+        
 
     target_series = df.loc[:,target]
 
@@ -39,6 +40,6 @@ if __name__ == "__main__":
     feature_df, target_series = data_preparation(df_raw)
     X_train, X_test, y_train, y_test = data_split(feature_df, target_series)
     reg=train_model(X_train,y_train)
-    eval_score=eval_model()
+    eval_score=eval_model(X_test,y_test,reg)
     print(f"Trained model score is: {eval_score}")
 
