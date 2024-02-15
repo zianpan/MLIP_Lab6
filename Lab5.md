@@ -16,7 +16,7 @@ To receive credit for this lab, show your work to the TA during recitation.
 - Show the success of installation by running `java --version`
 
 ## Jenkins Installation
-- In the same page we use in **Java Installation**, locate the installation command for Jenkins. For linux ubuntu system, it's:
+- In the same page for **Java Installation**, locate the installation command for Jenkins. For linux ubuntu system, it's:
 ```
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
