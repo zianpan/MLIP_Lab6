@@ -33,13 +33,7 @@ sudo apt-get install jenkins
 - Fork the [repository for lab 5](https://github.com/JayYu0116/MLIP_Lab5) repository and clone it to your local machine.
 
 ## Complete the Jenkins File
-- Replace the API key in the started code
-- Create the project and verify if you can access your project on the hub
-- Finish all 6 steps mentioned in the python notebook 
-- Verify if the data has been uploaded on the zeno hub project you created
-- Go back to Step 2 - Uncomment this line -> ZenoMetric(name="avg length ratio", type="mean", columns=["avg_length_ratio"])
-- Go back to Step 3 - Uncomment the last line -> Complete the function to calculate the avg length ratio
-- Upload the system outputs again and verify if the newly added metric has been reflected
+
 
 ## Additional resources
 - [Zeno Getting Started](https://zenoml.com/docs/intro)
