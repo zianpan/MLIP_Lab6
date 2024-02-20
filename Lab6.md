@@ -29,7 +29,11 @@ sudo apt-get install jenkins
 - Use command `sudo systemctl start jenkins` to start Jenkins server.
 - Show the success of Jenkins installation by running `sudo systemctl status jenkins`
 - Enter `127.0.0.1:8080` in your browser and set up jenkins according to [post installation wizard](https://www.jenkins.io/doc/book/installing/linux/#setup-wizard).
-- Give Jenkins sudo permission by running `sudo visudo` and add line `jenkins ALL=(ALL) NOPASSWD: ALL` to this file. 
+- Give Jenkins sudo permission by running `sudo visudo` and add line `jenkins ALL=(ALL) NOPASSWD: ALL` to this file.
+### Secure Jenkins Server
+- After retrieve access code of Jenkins, please set up a strong password. You Jenkins portal will be opened to the public internet and susceptible to attack.
+- If you home internet has static IP address, you could set up firewall white list to protect your Jenkins server.
+- Jenkins also allows [advanced security management](https://www.jenkins.io/doc/book/security/managing-security/) to control each user's permitted actions. This should not be useful in current team project.
 
 ## Fork & Clone the Git Repository and Set Up Running Environment
 - Please use a virtual environment management tool to for this project. In your team server, it is recommended to use [miniconda](https://docs.anaconda.com/free/miniconda/index.html). Create a python virtual environment and install `pytest`, `numpy`, `pandas`, and `sklearn` packages. If `git` is not installed in your team server, please run `sudo apt install git`. (You can use `venv` or `pipenv` instead of `conda` and adjust Jenkinsfile accordingly)
