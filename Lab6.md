@@ -7,7 +7,7 @@ To receive credit for this lab, show your work to the TA during recitation.
 
 ## Deliverables
 - [ ] Show correct configuration of a Jenkins pipeline on **forked [Lab6 Github Repo](https://github.com/JayYu0116/MLIP_Lab6/)**. The build process must automatically fetch Jenkinsfile and run pipeline according to it.
-- [ ] Complete the `jenkinsfile` to make the Jenkins pipeline test the repo during each build.
+- [ ] Complete the `jenkinsfile` to make the Jenkins pipeline test the repo during each build. Explain your understanding of what the given Jenkinsfile does.
 - [ ] Complete the `test_data_split` function in `test.py` to test data split step.
 
 ## Environment Set Up
