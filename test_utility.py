@@ -4,7 +4,7 @@ import numpy as np
 from prediction_demo import data_preparation,data_split,train_model,eval_model
 
 @pytest.fixture
-def housing_data_stub():
+def housing_data_sample():
     return pd.DataFrame(
       data ={
       'price':[13300000,12250000],
@@ -22,8 +22,8 @@ def housing_data_stub():
       'furnishingstatus':["furnished","unfurnished"]}
     )
 
-def test_data_preparation(housing_data_stub):
-    feature_df, target_series = data_preparation(housing_data_stub)
+def test_data_preparation(housing_data_sample):
+    feature_df, target_series = data_preparation(housing_data_sample)
     # Target and datapoints has same length
     assert feature_df.shape[0]==len(target_series)
 
@@ -31,11 +31,11 @@ def test_data_preparation(housing_data_stub):
     assert feature_df.shape[1] == feature_df.select_dtypes(include=(np.number,np.bool_)).shape[1]
 
 @pytest.fixture
-def feature_target_stub(housing_data_stub):
-    feature_df, target_series = data_preparation(housing_data_stub)
+def feature_target_sample(housing_data_sample):
+    feature_df, target_series = data_preparation(housing_data_sample)
     return (feature_df, target_series)
 
-def test_data_split(feature_target_stub):
-    return_tuple = data_split(*feature_target_stub)
+def test_data_split(feature_target_sample):
+    return_tuple = data_split(*feature_target_sample)
     # TODO test if the length of return_tuple is 4
     raise NotImplemented
