@@ -11,6 +11,7 @@ To receive credit for this lab, show your work to the TA during recitation.
 - [ ] Complete the `test_data_split` function in `test.py` to test data split step.
 
 ## Environment Set Up
+Since we recommend you to use team server, your teammate may already finish this step on your team server. **Please do not install Java and Jenkins again if your teammate have already done it.** Since Jenkins has many installation options, please communicate with your teammate to settle down a way you prefer. This lab recommends install Jenkins as a system service using JVM but the final choice is yours. </br> What's more, please strictly keep your credentials of Jenkins secret from anyone outside your group. Our team server has public IP and malicious attacker can cause significant harm to your VM by breaching Jenkins.
 ### Java Installation
 - Go to [Jenkins Installation Page](https://www.jenkins.io/doc/book/installing/), select the Operating System you currently use. For your team server, please select [linux](https://www.jenkins.io/doc/book/installing/linux/).
 - Under section [Installation of Java](https://www.jenkins.io/doc/book/installing/linux/#installation-of-java), install java using command: `sudo apt install fontconfig openjdk-17-jre`.
@@ -53,7 +54,7 @@ sudo apt-get install jenkins
 - Change the `branch specifier` to `main`. Then, during each build, your Jenkins will pull code from Github and build upon it.
 
 ## Complete Pytest Test Case
-Notice that there is file named `test_utility.py` in our repo. Pytest will recursively search through the work directory to find files with pattern **test_*.py** or ***_test.py** to collect test cases. Inside `test_utility.py`, pytest will search for function names with **test** and execute them. In this case, `test_data_preparation` and `test_data_split` will be collected by pytest and executed. Since it's time consuming to test the function using the whole training dataset, we often create stubs, which are light-weight toy object act like input to test functions. In this case, `housing_data_stub` is a stub with only two rows. It also provide deterministic test data that can help to reproduce error. Now, please follow the steps below to complete deliverables.
+Notice that there is file named `test_utility.py` in our repo. Pytest will recursively search through the work directory to find files with pattern **test_*.py** or ***_test.py** to collect test cases. Inside `test_utility.py`, pytest will search for function names with **test** and execute them. In this case, `test_data_preparation` and `test_data_split` will be collected by pytest and executed. Since it's time consuming to test the function using the whole training dataset, we create a light-weight toy dataset act like input to test functions. In this case, `housing_data_sample` is a toy input with only two rows. It also provide deterministic test data that can help to reproduce error. Now, please follow the steps below to complete deliverables.
 - Run `pytest` on the root directory your local cloned repo. You should observe a failed test with error `NotImplemented`.
 - modified the **TODO** part in `test_utility.py` to test data split function.
 - Run `pytest` again and make sure all test cases are passed.
