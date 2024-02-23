@@ -24,17 +24,11 @@ pipeline {
                 # TODO Complete the command to run pytest
                 # sudo /home/shengnan2/miniconda3/bin/conda run -n base pytest
                 source mlip/bin/activate
-                pwd
-                ls
-                pip install pytest
-                pip install pandas
-                pip install numpy
-                pip install scikit-learn
                 pytest
 
 
-                echo 'pytest not runned'
-                exit 1 #comment this line after implementing Jenkinsfile
+                # echo 'pytest not runned'
+                # exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }
