@@ -24,6 +24,7 @@ pipeline {
                 # TODO Complete the command to run pytest
                 # sudo /home/shengnan2/miniconda3/bin/conda run -n base pytest
                 source mlip/bin/activate
+                pwd
                 pip install pytest
                 pip install pandas
                 pip install numpy
