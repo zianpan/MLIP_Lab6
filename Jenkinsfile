@@ -17,13 +17,13 @@ pipeline {
 
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
-                sudo /home/shengnan2/miniconda3/bin/conda init
+                // sudo /home/shengnan2/miniconda3/bin/conda init
 
 
 
                 # TODO Complete the command to run pytest
-                sudo /home/shengnan2/miniconda3/bin/conda run -n base pytest
-                # source mlip/bin/activate pytest
+                // sudo /home/shengnan2/miniconda3/bin/conda run -n base pytest
+               source mlip/bin/activate pytest
 
 
                 echo 'pytest not runned'
