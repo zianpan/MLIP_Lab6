@@ -23,7 +23,11 @@ pipeline {
 
                 # TODO Complete the command to run pytest
                 # sudo /home/shengnan2/miniconda3/bin/conda run -n base pytest
-               source mlip/bin/activate pytest
+               source mlip/bin/activate
+               pip install pytest
+               pip install pandas, numpy
+               pip install scikit-learn
+               pytest
 
 
                 echo 'pytest not runned'
